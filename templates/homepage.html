@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %}DATA.IO{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+<div class= "tm-content col-xl-6 col-sm-8 col-xs-8 ml-auto section">
+	<header class="mb-5"><h1>DATA.IO</h1></header>
+	<P class="mb-5">Welcome to the leading Real-Time Data Market</P>
+
+	<form action="signin" method="post" class="subscribe-form">
+		<div class="row form-section">
+			<div class="col-md-7 col-sm-7 col-xs-7">
+				<input name="user" type="text" class="form-control" id="user" placeholder="Your Email..." required/>
+			</div>
+			<div class="col-md-5 col-sm-5 col-xs-5">
+				<button type="submit" class="tm-btn-subscribe">Sign-In</button>
+			</div>
+		</div>
+	</form>
+
+	<div class="tm-social-icons-container text-xs-center">
+		<a href="#" class="tm-social-link"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="tm-social-link"><i class="fa fa-twitter"></i></a>
+		<a href="#" class="tm-social-link"><i class="fa fa-linkedin"></i></a>
+	</div>
+</div>
+{% endblock %}
