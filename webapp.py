@@ -35,12 +35,23 @@ def signin():
 		if "user" in request.form:
 			user = request.form["user"]
 			return render_template("login.html", user = user)
+	if request.method == 'GET':
+		if request.args.get("email") != None and request.args.get("pass") != None:
+			print("ENTER")
+			return redirect(url_for('Dashboard'))
 	return redirect(url_for('homePage'), code=302)
 
-@app.route('/index')
-def index():
-	return render_template("index2.html")
+@app.route('/dashboard')
+def Dashboard():
+	return render_template("dashboard.html", active = "dashboard", content=render_template("dashExample.html"))
 
+@app.route('/dashboard/sell')
+def DashboardSell():
+	return render_template("dashboard.html", active = "sell", content=render_template("dashExample.html"))
+
+@app.route('/dashboard/buy')
+def DashboardBuy():
+	return render_template("dashboard.html", active = "buy", content=render_template("dashExample.html"))
 
 if __name__ == '__main__':
 	app.run(debug=True)

@@ -1,0 +1,60 @@
+
+    <div class="sidebar" data-color="blue">
+      <!-- Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow" -->
+      <div class="logo">
+        <a href="https://github.com/app-generator/flask-now-ui-dashboard" class="simple-text logo-mini">
+          
+        </a>
+        <a href="https://github.com/app-generator/flask-now-ui-dashboard" class="simple-text logo-normal">
+          DATA.IO
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+          {% if active == "dashboard" %}
+          <li class="active ">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="/dashboard">
+              <i class="now-ui-icons design_app"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+
+          {% if active == "buy" %}
+          <li class="active ">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="/dashboard/buy">
+              <i class="now-ui-icons education_atom"></i>
+              <p>Buy Data</p>
+            </a>
+          </li>
+
+          {% if active == "sell" %}
+          <li class="active ">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="/dashboard/sell">
+              <i class="now-ui-icons objects_spaceship"></i>
+              <p>Sell Data</p>
+            </a>
+          </li>
+
+          {% if active == "user" %}
+          <li class="active ">
+          {% else %}
+          <li>
+          {% endif %}
+            <a href="/user.html">
+              <i class="now-ui-icons users_single-02"></i>
+              <p>User Profile</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
