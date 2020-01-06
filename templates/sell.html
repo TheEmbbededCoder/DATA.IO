@@ -1,0 +1,124 @@
+
+      <div class="panel-header panel-header-sm">
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="title">Add new DATA</h5>
+              </div>
+              <div class="card-body">
+                <form action="/sell" method="post">
+                  <div class="row">
+                    <div class="col-md-2 pr-1">
+                      <div class="form-group">
+                        <label>UserID</label>
+                        <input type="text" class="form-control" disabled="" placeholder="ID" value="3">
+                      </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                      <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" placeholder="Username" value="TheEmbeddedCoder">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" placeholder="{{ user }}" value="{{ user }}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 pr-1">
+                      <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label>Category</label>
+                        <select name="category" class="form-control">
+                          <option value="home">Home</option>
+                          <option value="industrial">Industrial</option>
+                          <option value="comercial">Comercial</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-1">
+                      <div class="form-group">
+                        <label>Sub-Category</label>
+                        <select name="subcategory" class="form-control">
+                          <option value="home">Sensors</option>
+                          <option value="industrial">Actuators</option>
+                          <option value="comercial">External</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Description</label>
+                        <textarea rows="4" cols="80" class="form-control" placeholder="Description of the Data" value="..."></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Perioticity</label>
+                        <select name="per" class="form-control">
+                          <option value="home">Day</option>
+                          <option value="industrial">Hour</option>
+                          <option value="comercial">Minute</option>
+                          <option value="other">Second</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                      <div class="form-group">
+                        <label></label>
+                        <select name="perd" class="form-control">
+                          <option value="home">1</option>
+                          <option value="industrial">2</option>
+                          <option value="comercial">5</option>
+                          <option value="other">10</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label>Type of ID</label>
+                        <select name="ID" class="form-control">
+                          <option value="home">IP</option>
+                          <option value="industrial">GPS</option>
+                          <option value="comercial">Custom</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Price per fetch [€]</label>
+                        <input type="text" class="form-control" placeholder="0.00 €">
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col-md-4 px-1">
+                      <button type="submit" class="btn btn-fill btn-primary">Submit</button> 
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+

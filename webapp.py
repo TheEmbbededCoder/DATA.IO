@@ -13,6 +13,7 @@ import datetime
 
 app = Flask(__name__)
 
+user = "ex@gmail.com"
 
 # # ERROR resource not found page
 # @app.errorhandler(404)
@@ -31,6 +32,7 @@ def homePage():
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
+	global user
 	if request.method == 'POST':
 		if "user" in request.form:
 			user = request.form["user"]
@@ -47,11 +49,22 @@ def Dashboard():
 
 @app.route('/dashboard/sell')
 def DashboardSell():
-	return render_template("dashboard.html", active = "sell", content=render_template("dashExample.html"))
+	global user
+	return render_template("dashboard.html", active = "sell", content=render_template("sell.html", user = user))
+
+@app.route('/sell', methods=['POST'])
+def Sell():
+	return render_template("dashboard.html", active = "sell", content=render_template("generate.html", user = user))
+
 
 @app.route('/dashboard/buy')
 def DashboardBuy():
-	return render_template("dashboard.html", active = "buy", content=render_template("dashExample.html"))
+	return render_template("dashboard.html", active = "buy", content=render_template("buy.html"))
+
+
+@app.route('/buy/<secret>', methods=['GET'])
+def Buy(secret):
+	return render_template("dashboard.html", active = "buy", content=render_template("buy.html"))
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(debug=True, port=45000)
